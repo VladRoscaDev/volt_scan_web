@@ -34,6 +34,8 @@
             background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%2300d2ff' stroke-width='0.5' stroke-opacity='0.1'%3E%3Cpath d='M50 0H20c4.418 0 8 3.582 8 8v60c0 4.418-3.582 8-8 8H0V88h80V0H50zM30 0h20v80H30V0zm20 0h30v80H50V0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
+        
+
         body::before {
             content: "";
             position: fixed;
@@ -54,6 +56,7 @@
             gap: 2rem;
             align-items: start;
             position: relative;
+            z-index: 10;
         }
 
         .sticky-phone-wrapper {
@@ -73,6 +76,15 @@
             z-index: -1;
             background: #020617;
             /* Fundal solid pentru a vedea liniile clar */
+        }
+
+        #circuit-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Canvas-ul peste fundalul negru */
         }
 
         .particle {
