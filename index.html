@@ -110,6 +110,20 @@
             border-radius: 10px;
         }
 
+        @keyframes scan {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(200%);
+            }
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
         @keyframes floatParticle {
             0% {
                 transform: translateY(110vh) scale(0);
@@ -534,59 +548,90 @@
             </div>
 
             <div class="relative mb-32" data-aos="zoom-in">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="absolute -inset-24 bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center relative z-10">
 
                     <div
-                        class="group relative overflow-hidden rounded-[2.5rem] border border-white/10 aspect-[4/5] bg-slate-900 transition-all duration-500 hover:z-20 group-hover:scale-105 group-hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(6,182,212,0.2)]">
-                        <img src="https://volt-scan.vercel.app/tools.jpeg" alt="Scan Interface"
-                            class="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100 grayscale group-hover:grayscale-0">
+                        class="group relative rounded-[2.5rem] border border-white/10 aspect-[4/5] bg-slate-900 transition-all duration-700 hover:z-30 hover:scale-105 hover:-translate-y-4 hover:shadow-[0_0_50px_rgba(6,182,212,0.3)] overflow-hidden">
+                        <img src="https://volt-scan.vercel.app/tools.jpeg" alt="Tools"
+                            class="w-full h-full object-cover transition-all duration-1000 scale-110 group-hover:scale-100 grayscale group-hover:grayscale-0">
 
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 group-hover:opacity-30 transition-all duration-500">
+                            class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent -translate-y-full group-hover:animate-[scan_2s_ease-in-out_infinite] pointer-events-none">
                         </div>
 
                         <div
-                            class="absolute bottom-8 left-8 transition-transform duration-500 group-hover:translate-x-2">
-                            <span
-                                class="text-cyan-400 font-black italic uppercase tracking-tighter text-xl block">Complete</span>
-                            <span class="text-white font-black italic uppercase tracking-tighter text-sm opacity-60">Set
-                                of Tools</span>
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-90 group-hover:opacity-40 transition-all duration-500">
+                        </div>
+
+                        <div
+                            class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span
+                                        class="text-cyan-400 font-black italic uppercase tracking-tighter text-xl block leading-none">Complete</span>
+                                    <span
+                                        class="text-white/60 font-bold uppercase tracking-widest text-[10px]">On-Device
+                                        Toolkit</span>
+                                </div>
+                                <i class="fas fa-layer-group text-cyan-400/50 text-xl"></i>
+                            </div>
                         </div>
                     </div>
 
                     <div
-                        class="group relative overflow-hidden rounded-[2.5rem] border border-cyan-500/30 aspect-[4/5] md:-mt-12 bg-slate-900 transition-all duration-500 hover:z-20 group-hover:scale-110 group-hover:-translate-y-8 shadow-[0_0_50px_rgba(6,182,212,0.1)] hover:shadow-[0_30px_60px_rgba(6,182,212,0.3)]">
-                        <img src="https://volt-scan.vercel.app/sign.jpeg" alt="Signature UI"
-                            class="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100 grayscale group-hover:grayscale-0">
+                        class="group relative rounded-[2.8rem] border-2 border-cyan-500/30 aspect-[4/5] md:-mt-12 bg-slate-900 transition-all duration-700 hover:z-30 hover:scale-110 hover:-translate-y-8 shadow-[0_0_60px_rgba(6,182,212,0.15)] hover:shadow-[0_0_80px_rgba(6,182,212,0.4)] overflow-hidden">
+                        <img src="https://volt-scan.vercel.app/sign.jpeg" alt="Signature"
+                            class="w-full h-full object-cover transition-all duration-1000 scale-110 group-hover:scale-100 grayscale group-hover:grayscale-0">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-transparent -translate-y-full group-hover:animate-[scan_2.5s_ease-in-out_infinite] pointer-events-none">
+                        </div>
 
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-blue-600/60 via-transparent to-transparent group-hover:opacity-20 transition-all duration-500">
                         </div>
 
                         <div
-                            class="absolute bottom-10 left-10 transition-transform duration-500 group-hover:translate-x-2">
-                            <span
-                                class="text-white font-black italic uppercase tracking-tighter text-3xl block">Digital</span>
-                            <span
-                                class="text-cyan-400 font-black italic uppercase tracking-tighter text-lg">Signature</span>
+                            class="absolute bottom-8 left-6 right-6 p-6 rounded-3xl bg-cyan-500/10 backdrop-blur-xl border border-cyan-400/30 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span
+                                        class="text-white font-black italic uppercase tracking-tighter text-2xl block leading-none text-glow">Digital</span>
+                                    <span class="text-cyan-400 font-bold uppercase tracking-widest text-[10px]">P12 &
+                                        Holographic</span>
+                                </div>
+                                <i class="fas fa-pen-nib text-white text-2xl animate-pulse"></i>
+                            </div>
                         </div>
                     </div>
 
                     <div
-                        class="group relative overflow-hidden rounded-[2.5rem] border border-white/10 aspect-[4/5] bg-slate-900 transition-all duration-500 hover:z-20 group-hover:scale-105 group-hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(6,182,212,0.2)]">
-                        <img src="https://volt-scan.vercel.app/watermark.jpeg" alt="Copy-write Protection"
-                            class="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100 grayscale group-hover:grayscale-0">
+                        class="group relative rounded-[2.5rem] border border-white/10 aspect-[4/5] bg-slate-900 transition-all duration-700 hover:z-30 hover:scale-105 hover:-translate-y-4 hover:shadow-[0_0_50px_rgba(6,182,212,0.3)] overflow-hidden">
+                        <img src="https://volt-scan.vercel.app/watermark.jpeg" alt="Watermark"
+                            class="w-full h-full object-cover transition-all duration-1000 scale-110 group-hover:scale-100 grayscale group-hover:grayscale-0">
 
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 group-hover:opacity-30 transition-all duration-500">
+                            class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent -translate-y-full group-hover:animate-[scan_2s_ease-in-out_infinite] pointer-events-none">
                         </div>
 
                         <div
-                            class="absolute bottom-8 left-8 transition-transform duration-500 group-hover:translate-x-2">
-                            <span
-                                class="text-cyan-400 font-black italic uppercase tracking-tighter text-xl block">Customize</span>
-                            <span
-                                class="text-white font-black italic uppercase tracking-tighter text-sm opacity-60">Watermarks</span>
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-90 group-hover:opacity-40 transition-all duration-500">
+                        </div>
+
+                        <div
+                            class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span
+                                        class="text-cyan-400 font-black italic uppercase tracking-tighter text-xl block leading-none">Customize</span>
+                                    <span
+                                        class="text-white/60 font-bold uppercase tracking-widest text-[10px]">Anti-Theft
+                                        Protection</span>
+                                </div>
+                                <i class="fas fa-stamp text-cyan-400/50 text-xl"></i>
+                            </div>
                         </div>
                     </div>
 
