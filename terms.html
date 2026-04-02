@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termeni și Condiții | VoltScan 2026</title>
+    <title>Terms of Service | VoltScan 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -12,6 +12,10 @@
             background: rgba(30, 41, 59, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
         }
     </style>
 </head>
@@ -21,107 +25,108 @@
     <nav class="sticky top-0 z-50 p-6 border-b border-white/5 bg-slate-950/80 backdrop-blur-md">
         <a href="index.html" class="flex items-center gap-3 w-fit hover:opacity-80 transition group">
             <i class="fas fa-arrow-left text-cyan-500 group-hover:-translate-x-1 transition-transform"></i>
-            <span class="uppercase font-bold tracking-tighter text-white">Centrul de Control</span>
+            <span class="uppercase font-black tracking-widest text-white text-xs">Back to Command Center</span>
         </a>
     </nav>
 
     <main class="max-w-4xl mx-auto px-6 py-20">
         <header class="mb-16">
             <div
-                class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
-                Versiunea 2.0 - Martie 2026
+                class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+                Version 3.1 - April 2026
             </div>
-            <h1 class="text-5xl font-black text-white mb-4 tracking-tight">Termeni și <span
-                    class="text-cyan-500">Condiții</span></h1>
-            <p class="text-slate-500">Vă rugăm să citiți cu atenție acest document înainte de a utiliza serviciile
-                VoltScan.</p>
+            <h1 class="text-5xl md:text-6xl font-black text-white mb-4 tracking-tighter italic">Terms of <span
+                    class="text-cyan-500 text-glow">Service</span></h1>
+            <p class="text-slate-500 font-medium">Please review our decentralized service architecture terms before
+                using VoltScan.</p>
         </header>
 
         <div class="space-y-12 leading-relaxed text-sm md:text-base">
 
-            <section class="glass-card p-8 rounded-2xl">
+            <section class="glass-card p-8 rounded-[2rem]">
                 <h2 class="text-white font-black uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
-                    <span class="w-8 h-[1px] bg-cyan-500"></span> 1. Acceptarea Serviciului
+                    <span class="w-8 h-[1px] bg-cyan-500"></span> 1. Nature of Service
                 </h2>
-                <p>Prin accesarea și utilizarea aplicației **VoltScan 2026** (denumită în continuare "Serviciul"),
-                    confirmați că aveți vârsta legală pentru a încheia un contract și că acceptați acești Termeni și
-                    Condiții în totalitate. Serviciul oferă procesare documentară prin algoritmi de optimizare PDF.</p>
+                <p>VoltScan ("the App") is a local-first utility. By using the App, you acknowledge that all document
+                    processing, including scanning via camera, OCR, and PDF manipulation, occurs <strong>exclusively on
+                        your physical device</strong>. We do not provide cloud storage, and we do not have access to
+                    your camera feed or the resulting files.</p>
             </section>
 
-            <section class="p-4 border-l-2 border-slate-800">
-                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">2. Conturi și Securitate</h2>
-                <p>Utilizatorul este singurul responsabil pentru menținerea confidențialității datelor de acces. Orice
-                    activitate desfășurată sub contul dumneavoastră este responsabilitatea dumneavoastră. VoltScan
-                    utilizează tehnologie de stocare locală și procesare criptată pentru a minimiza riscurile de
-                    securitate.</p>
+            <section class="p-4 border-l-2 border-cyan-500/30 bg-white/5 rounded-r-2xl">
+                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">2. No User Accounts</h2>
+                <p>VoltScan does not require or support user accounts. We do not store your identity. This means:</p>
+                <ul class="mt-4 space-y-2 text-slate-400 italic">
+                    <li>• There is no "Login" to recover data.</li>
+                    <li>• If the App is deleted, all locally stored document metadata is permanently erased.</li>
+                    <li>• You are 100% responsible for backing up your own documents.</li>
+                </ul>
             </section>
 
-            <section class="glass-card p-8 rounded-2xl border-l-4 border-cyan-500">
+            <section class="glass-card p-8 rounded-[2rem] border border-rose-500/20">
+                <h2 class="text-rose-400 font-black uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
+                    <i class="fas fa-exclamation-triangle"></i> 3. Impossible Data Recovery
+                </h2>
+                <p>Because we operate on a <strong>Zero-Knowledge</strong> architecture, VoltScan <strong>cannot
+                        retrieve lost documents</strong>. We do not have a "Trash" folder on our side or any backup
+                    servers. If you lose your phone or delete a file within the app, it is gone forever. We recommend
+                    using your OS-level backup (iCloud/Google Drive) for file safety.</p>
+            </section>
+
+            <section class="glass-card p-8 rounded-[2rem] border-l-4 border-cyan-500">
                 <h2
                     class="text-white font-black uppercase tracking-widest text-xs mb-6 flex items-center gap-2 text-cyan-500">
-                    <i class="fas fa-credit-card"></i> 3. Plăți, Abonamente și Facturare
+                    <i class="fas fa-credit-card"></i> 4. Subscriptions & Payments
                 </h2>
                 <div class="space-y-4">
-                    <p>VoltScan oferă modele de utilizare gratuite (Free Tier) și premium (Pro/Ultra). Prin alegerea
-                        unui abonament premium, sunteți de acord cu următoarele:</p>
+                    <p>Premium features are handled via the Google Play Store or Apple App Store. By purchasing, you
+                        agree to:</p>
                     <ul class="list-none space-y-3 pl-4">
                         <li class="flex gap-3"><i class="fas fa-check text-cyan-500 mt-1 text-xs"></i>
-                            <span><strong>Prețuri:</strong> Toate tarifele includ taxele aplicabile, cu excepția cazului
-                                în care se specifică altfel.</span></li>
+                            <span><strong>Billing:</strong> Handled entirely by the platform (Google/Apple). We never
+                                see your credit card info.</span>
+                        </li>
                         <li class="flex gap-3"><i class="fas fa-check text-cyan-500 mt-1 text-xs"></i>
-                            <span><strong>Reînnoire Automată:</strong> Abonamentele se reînnoiesc automat la sfârșitul
-                                perioadei de facturare (lunar/anual), folosind aceeași metodă de plată.</span></li>
+                            <span><strong>Auto-Renewal:</strong> Subscriptions renew automatically unless canceled via
+                                your Store Settings.</span>
+                        </li>
                         <li class="flex gap-3"><i class="fas fa-check text-cyan-500 mt-1 text-xs"></i>
-                            <span><strong>Anulare:</strong> Puteți anula reînnoirea automată oricând din setările
-                                contului. Accesul premium va rămâne activ până la sfârșitul perioadei deja
-                                achitate.</span></li>
-                        <li class="flex gap-3"><i class="fas fa-check text-cyan-500 mt-1 text-xs"></i>
-                            <span><strong>Procesatori de Plăți:</strong> Utilizăm Stripe/PayPal/Google Pay pentru
-                                tranzacții securizate. VoltScan nu stochează datele cardului dumneavoastră pe serverele
-                                proprii.</span></li>
+                            <span><strong>Refunds:</strong> Since access is granted immediately, refunds must be
+                                requested through the App Store/Play Store support channels.</span>
+                        </li>
                     </ul>
                 </div>
             </section>
 
             <section class="p-4 border-l-2 border-slate-800">
-                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">4. Dreptul de Retragere
-                    (Rambursări)</h2>
-                <p>Conform legislației UE privind furnizarea de conținut digital, sunteți de acord că furnizarea
-                    serviciului începe imediat după plată. Deoarece Serviciul oferă acces instantaneu la funcționalități
-                    digitale, dreptul de retragere de 14 zile nu se aplică dacă utilizarea funcțiilor premium a început
-                    deja. Rambursările se acordă exclusiv la discreția VoltScan în caz de erori tehnice majore
-                    demonstrate.</p>
+                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">5. Permitted Use</h2>
+                <p>The camera-based scanning must be used for legal purposes only. You may not use VoltScan to process
+                    forged documents, copyrighted materials without permission, or any content that violates
+                    international laws. Since processing is local, you are the sole legal entity responsible for the
+                    content generated.</p>
             </section>
 
             <section class="p-4 border-l-2 border-slate-800">
-                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">5. Proprietate și Utilizare Date
-                </h2>
-                <p>VoltScan nu revendică niciun drept de proprietate asupra fișierelor încărcate de dumneavoastră.
-                    Sunteți singurul responsabil pentru legalitatea conținutului scanat. Este interzisă utilizarea
-                    Serviciului pentru procesarea de materiale ilegale, malware sau conținut protejat de drepturi de
-                    autor pe care nu aveți dreptul să îl utilizați.</p>
+                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">6. Limitation of Liability</h2>
+                <p>VoltScan is provided "AS IS". We do not guarantee that the App will be error-free. In no event shall
+                    VoltScan be liable for any loss of data, hardware damage, or indirect damages arising from the use
+                    of our local-processing engine.</p>
             </section>
 
-            <section class="p-4 border-l-2 border-slate-800">
-                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">6. Limitarea Răspunderii</h2>
-                <p>În măsura maximă permisă de lege, VoltScan nu va fi răspunzător pentru daune indirecte, pierderi de
-                    profit sau pierderi de date rezultate din utilizarea sau incapacitatea de a utiliza Serviciul.
-                    Răspunderea totală a VoltScan față de utilizator este limitată la suma plătită de acesta pentru
-                    serviciu în ultimele 12 luni.</p>
-            </section>
-
-            <section class="glass-card p-8 rounded-2xl">
+            <section class="glass-card p-8 rounded-[2rem]">
                 <h2 class="text-white font-black uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
-                    <i class="fas fa-gavel text-slate-500"></i> 7. Modificări și Legea Aplicabilă
+                    <i class="fas fa-gavel text-slate-500"></i> 7. Governing Law
                 </h2>
-                <p>Ne rezervăm dreptul de a modifica acești termeni oricând. Continuarea utilizării Serviciului după
-                    actualizare reprezintă acceptarea noilor termeni. Prezentul contract este guvernat de legile din
-                    România și UE, iar orice litigiu va fi soluționat de instanțele competente din București.</p>
+                <p>These terms are governed by the laws of the European Union. Any disputes will be settled in the
+                    competent courts of Bucharest, Romania. We reserve the right to update these terms to reflect new
+                    on-device features.</p>
             </section>
         </div>
 
-        <footer class="mt-20 pt-10 border-t border-white/5 text-center text-slate-500 text-xs">
-            <p>&copy; 2026 VoltScan. Toate drepturile rezervate. <br> Contact suport: legal@voltscan.io</p>
+        <footer
+            class="mt-20 pt-10 border-t border-white/5 text-center text-slate-500 text-[10px] uppercase tracking-[0.2em]">
+            <p>&copy; 2026 VoltScan. Privacy is not a feature, it's the foundation. <br> Contact: vladrosca93@gmail.com
+            </p>
         </footer>
     </main>
 

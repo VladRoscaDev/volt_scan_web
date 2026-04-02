@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politica de Confidențialitate | VoltScan 2026</title>
+    <title>Privacy Policy | VoltScan 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -12,6 +12,10 @@
             background: rgba(15, 23, 42, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(12px);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
         }
     </style>
 </head>
@@ -21,119 +25,118 @@
     <nav class="sticky top-0 z-50 p-6 border-b border-white/5 bg-slate-950/80 backdrop-blur-md">
         <a href="index.html" class="flex items-center gap-3 w-fit hover:opacity-80 transition group">
             <i class="fas fa-arrow-left text-cyan-500 group-hover:-translate-x-1 transition-transform"></i>
-            <span class="uppercase font-bold tracking-tighter text-white">Centrul de Control</span>
+            <span class="uppercase font-black tracking-widest text-white text-xs">Back to Command Center</span>
         </a>
     </nav>
 
     <main class="max-w-4xl mx-auto px-6 py-20">
-        <header class="mb-16">
-            <div class="p-3 bg-cyan-500/10 border border-cyan-500/20 rounded-xl w-fit mb-6">
-                <i class="fas fa-user-shield text-cyan-500 text-2xl"></i>
+        <header class="mb-16 text-center md:text-left">
+            <div class="inline-block p-3 bg-cyan-500/10 border border-cyan-500/20 rounded-2xl mb-6">
+                <i class="fas fa-shield-virus text-cyan-500 text-3xl"></i>
             </div>
-            <h1 class="text-5xl font-black text-white mb-4 tracking-tight">Politica de <span
-                    class="text-cyan-500">Confidențialitate</span></h1>
-            <p class="text-slate-500 italic">Ultima actualizare: 23 Martie 2026</p>
+            <h1 class="text-5xl md:text-6xl font-black text-white mb-4 tracking-tighter italic">Privacy <span
+                    class="text-cyan-500 text-glow">Manifesto</span></h1>
+            <p class="text-slate-500 font-medium uppercase tracking-[0.2em] text-[10px]">Effective Date: April 2026</p>
         </header>
 
         <div class="space-y-12 leading-relaxed">
 
-            <section class="glass-card p-8 rounded-2xl border-l-2 border-cyan-500">
+            <section class="glass-card p-8 rounded-[2rem] border-l-4 border-cyan-500">
                 <h2 class="text-white font-black uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
-                    01. Procesarea Documentelor (Local-First)
+                    01. Radical Local Processing
                 </h2>
-                <p class="mb-4">Principiul nostru fundamental este **Privacy by Design**. Spre deosebire de alte
-                    servicii cloud:</p>
-                <ul class="list-none space-y-2 pl-4">
-                    <li class="flex gap-3"><i class="fas fa-microchip text-cyan-500 mt-1"></i> <span>Documentele sunt
-                            procesate local pe dispozitivul dumneavoastră ori de câte ori este posibil.</span></li>
-                    <li class="flex gap-3"><i class="fas fa-trash-can text-rose-500 mt-1"></i> <span>Dacă procesarea
-                            necesită resurse cloud (OCR avansat), fișierele sunt stocate în containere RAM volatile și
-                            sunt <strong>șterse automat și definitiv</strong> imediat după finalizarea sarcinii.</span>
-                    </li>
-                    <li class="flex gap-3"><i class="fas fa-eye-slash text-cyan-500 mt-1"></i> <span>Niciun angajat
-                            VoltScan nu poate vizualiza conținutul documentelor dumneavoastră.</span></li>
-                </ul>
+                <p class="mb-6">At VoltScan, privacy isn't a setting—it's the architecture. Your documents never touch
+                    our servers because **we don't have servers.**</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex gap-4">
+                        <i class="fas fa-microchip text-cyan-500 text-xl"></i>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">On-Device OCR</h4>
+                            <p class="text-xs mt-1 text-slate-500">Text recognition happens using your phone's neural
+                                engine. No data leaves the device.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-eye-slash text-cyan-500 text-xl"></i>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Zero Observation</h4>
+                            <p class="text-xs mt-1 text-slate-500">Since files are local, no one—not even the
+                                developers—can see what you scan.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="p-4 border-l-2 border-slate-800">
-                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">02. Ce date colectăm?</h2>
+                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">02. What data do we collect?
+                </h2>
                 <div class="space-y-4">
-                    <p>Colectăm un set minim de date necesar pentru funcționarea serviciului și facturare:</p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Identitate:</strong> Adresa de e-mail (pentru cont și sincronizare abonament).</li>
-                        <li><strong>Tranzacții:</strong> Istoricul plăților, statusul abonamentului și date de facturare
-                            (Nume, Adresă - conform cerințelor fiscale).</li>
-                        <li><strong>Tehnice:</strong> Tipul dispozitivului, sistemul de operare și log-uri de erori
-                            (pentru depanare).</li>
+                    <p>Since we have **no user accounts**, our data footprint is nearly zero. We only interact with:</p>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-center gap-3"><i class="fas fa-times text-rose-500"></i> <span>No Email /
+                                No Phone Numbers</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-times text-rose-500"></i> <span>No Document
+                                Metadata Collection</span></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-cyan-500"></i>
+                            <span><strong>Anonymous Analytics:</strong> Only crash reports and basic usage patterns to
+                                improve performance (e.g., "how many times was the signature tool used").</span></li>
                     </ul>
                 </div>
             </section>
 
-            <section class="glass-card p-8 rounded-2xl">
+            <section class="glass-card p-8 rounded-[2rem]">
                 <h2 class="text-white font-black uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
-                    03. Securitatea Plăților și Date Bancare
+                    03. Payment & Billing Privacy
                 </h2>
-                <p class="mb-4">Pentru procesarea plăților, utilizăm parteneri certificați (Stripe / PayPal).
-                    <strong>VoltScan nu are acces, nu colectează și nu stochează:</strong></p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-slate-900/50 p-4 rounded-lg border border-white/5">
-                        <i class="fas fa-credit-card text-rose-400 mb-2"></i>
-                        <p class="text-xs">Numere de card, coduri CVV sau date de expirare.</p>
+                <p class="mb-6">Subscriptions are processed through the official app stores. VoltScan does not possess
+                    your financial identity.</p>
+                <div class="bg-slate-900/80 p-6 rounded-2xl border border-white/5 space-y-4">
+                    <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                        <span class="text-xs font-bold uppercase tracking-widest">Transaction Method</span>
+                        <span class="text-cyan-400 text-xs font-black">App Store / Play Store</span>
                     </div>
-                    <div class="bg-slate-900/50 p-4 rounded-lg border border-white/5">
-                        <i class="fas fa-university text-cyan-400 mb-2"></i>
-                        <p class="text-xs">Date de autentificare bancară sau solduri de cont.</p>
+                    <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                        <span class="text-xs font-bold uppercase tracking-widest">Card Data Stored</span>
+                        <span class="text-rose-500 text-xs font-black italic uppercase">Never</span>
                     </div>
+                    <p class="text-[10px] text-slate-500 leading-tight">Billing is tied to your Apple ID or Google
+                        Account. We only receive a confirmation token to activate your features.</p>
                 </div>
-                <p class="mt-4 text-xs italic">Toate datele de plată sunt transmise direct procesatorului prin token-uri
-                    criptate.</p>
             </section>
 
             <section class="p-4 border-l-2 border-slate-800">
-                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">04. Drepturile Dumneavoastră
-                    (GDPR)</h2>
-                <p class="mb-4">Conform Regulamentului (UE) 2016/679, beneficiați de următoarele drepturi:</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-[10px] text-center font-bold uppercase">
-                    <div class="p-3 border border-white/5 rounded-lg">Acces la date</div>
-                    <div class="p-3 border border-white/5 rounded-lg">Rectificare</div>
-                    <div class="p-3 border border-white/5 rounded-lg">Ștergere (Dreptul de a fi uitat)</div>
-                    <div class="p-3 border border-white/5 rounded-lg">Portabilitate</div>
-                </div>
-                <p class="mt-4 text-sm">Pentru a exercita oricare dintre aceste drepturi, ne puteți contacta la <span
-                        class="text-cyan-500">privacy@voltscan.io</span>. Vom răspunde solicitării dumneavoastră în
-                    maximum 30 de zile.</p>
-            </section>
-
-            <section class="p-4 border-l-2 border-slate-800">
-                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">05. Cookie-uri și Tehnologii de
-                    Tracking</h2>
-                <p>VoltScan utilizează exclusiv cookie-uri <strong>funcționale</strong> (pentru a vă menține logat și
-                    pentru a reține preferințele de temă). Nu folosim cookie-uri de targetare publicitară (ads) sau de
-                    profilare comportamentală.</p>
-            </section>
-
-            <section class="glass-card p-8 rounded-2xl border-b-2 border-cyan-500">
-                <h2 class="text-white font-black uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
-                    06. Transferul de Date către Terți
-                </h2>
-                <p>Nu vindem, nu închiriem și nu tranzacționăm datele dumneavoastră personale. Singurele situații în
-                    care partajăm date sunt:</p>
-                <ul class="list-none space-y-2 mt-4 text-sm">
-                    <li><i class="fas fa-caret-right text-cyan-500 mr-2"></i> Când este cerut prin lege de către
-                        autoritățile competente.</li>
-                    <li><i class="fas fa-caret-right text-cyan-500 mr-2"></i> Către procesatorii de plăți pentru
-                        finalizarea tranzacțiilor pornite de dumneavoastră.</li>
-                    <li><i class="fas fa-caret-right text-cyan-500 mr-2"></i> Către serviciile de analiză tehnică (ex.
-                        Sentry) pentru raportarea crash-urilor aplicației.</li>
+                <h2 class="text-white font-bold uppercase tracking-widest text-xs mb-4">04. Device Permissions</h2>
+                <p class="mb-4">To function, VoltScan requires access to:</p>
+                <ul class="list-disc pl-6 space-y-2 text-sm">
+                    <li><strong>Camera:</strong> For document capture only. The feed is processed in real-time RAM and
+                        never recorded elsewhere.</li>
+                    <li><strong>Storage/Files:</strong> To save your finished PDFs to your gallery or local folder.</li>
+                    <li><strong>Biometrics:</strong> If you enable App Lock, your fingerprint/FaceID data is handled by
+                        the OS; the App never sees your biometric data.</li>
                 </ul>
+            </section>
+
+            <section class="glass-card p-8 rounded-[2rem] border-b-2 border-cyan-500">
+                <h2 class="text-white font-black uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
+                    05. Third-Party Disclosures
+                </h2>
+                <p>We do not sell, trade, or share your data with advertisers. Because we do not store your data, there
+                    is no database for us to leak or sell. The only third parties involved are Google/Apple for payment
+                    processing and optional crash reporting (Sentry/Firebase).</p>
+            </section>
+
+            <section class="text-center pt-10">
+                <p class="text-xs text-slate-600 uppercase tracking-[0.4em] mb-4">Encryption is a Human Right</p>
+                <p class="text-sm">For privacy-related inquiries: <span
+                        class="text-white font-bold">vladrosca93@gmail.com</span></p>
             </section>
 
         </div>
 
         <footer
             class="mt-20 pt-10 border-t border-white/5 text-center text-slate-500 text-[10px] uppercase tracking-widest">
-            <p>VoltScan 2026 &bull; Securitate prin Design &bull; <a href="terms.html"
-                    class="hover:text-cyan-500 transition">Termeni Legali</a></p>
+            <p>VoltScan 2026 &bull; Private by Architecture &bull; <a href="terms.html"
+                    class="hover:text-cyan-500 transition">Terms & Conditions</a></p>
         </footer>
     </main>
 

@@ -203,25 +203,43 @@
 
     <nav class="fixed w-full z-[100] backdrop-blur-xl bg-slate-950/80 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="p-2 bg-cyan-500 rounded-xl shadow-[0_0_15px_rgba(6,182,212,0.5)]"><i
-                        class="fas fa-bolt text-slate-900 text-xl"></i></div>
-                <span class="text-2xl font-black tracking-tighter uppercase">VoltScan</span>
+            <div class="flex items-center gap-3 group cursor-pointer"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div
+                    class="p-2 bg-cyan-500 rounded-xl shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-transform duration-500 group-hover:rotate-[360deg]">
+                    <i class="fas fa-bolt text-slate-900 text-xl"></i>
+                </div>
+                <span class="text-2xl font-black tracking-tighter uppercase text-white">Volt<span
+                        class="text-cyan-400">Scan</span></span>
             </div>
-            <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
-                <a href="#showcase" class="hover:text-cyan-400 transition">Funcții</a>
-                <a href="#pricing" class="hover:text-cyan-400 transition">Prețuri</a>
-                <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+
+            <div class="hidden md:flex gap-10 text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">
+                <a href="#mission" class="hover:text-cyan-400 transition-colors duration-300">Mission</a>
+                <a href="#showcase" class="hover:text-cyan-400 transition-colors duration-300">Features</a>
+                <a href="#philosophy" class="hover:text-cyan-400 transition-colors duration-300">Privacy</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contact</a>
             </div>
-            <a href="#download"
-                class="bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-cyan-400 transition">GET
-                PRO</a>
+
+            <div class="flex items-center gap-4">
+                <a href="#download"
+                    class="relative inline-flex items-center justify-center px-6 py-2.5 overflow-hidden font-bold text-white transition-all duration-300 bg-white/10 rounded-full group hover:bg-cyan-500 hover:text-slate-950 border border-white/10 hover:border-transparent">
+                    <span
+                        class="absolute inset-0 w-full h-full px-5 py-3 rounded-full bg-white/5 group-hover:bg-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span class="relative text-[11px] uppercase tracking-widest font-black">Get App</span>
+                </a>
+            </div>
         </div>
     </nav>
 
-    <section class="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 relative">
-        <div class="z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-8"
+    <section
+        class="min-h-[100vh] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden bg-slate-950">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent pointer-events-none">
+        </div>
+        <div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-600/5 blur-[120px] rounded-full"></div>
+
+        <div class="z-10 max-w-5xl">
+            <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-cyan-400 text-[10px] font-black uppercase tracking-[0.3em] mb-10 shadow-2xl shadow-cyan-500/10"
                 data-aos="fade-down">
                 <span class="relative flex h-2 w-2">
                     <span
@@ -231,38 +249,46 @@
                 Privacy First. Always.
             </div>
 
-            <h1 class="text-7xl md:text-9xl font-black mb-6 tracking-tighter" data-aos="fade-up">
-                Volt<span class="text-cyan-400 text-glow">Scan</span>
+            <h1 class="text-7xl md:text-9xl font-black mb-8 tracking-tighter text-white" data-aos="zoom-out"
+                data-aos-duration="1000">
+                Volt<span
+                    class="text-transparent bg-clip-text bg-gradient-to-b from-cyan-300 via-cyan-500 to-blue-600 drop-shadow-[0_0_30px_rgba(6,182,212,0.3)]">Scan</span>
             </h1>
 
-            <p class="text-slate-400 text-xl md:text-2xl max-w-3xl mb-8 mx-auto leading-tight" data-aos="fade-up"
-                data-aos-delay="100">
-                Documentele tale nu sunt afacerea noastră. <br class="hidden md:block">
-                <span class="text-white">Procesare locală garantată.</span>
+            <p class="text-slate-400 text-xl md:text-3xl max-w-2xl mb-12 mx-auto leading-tight font-medium"
+                data-aos="fade-up" data-aos-delay="200">
+                Your documents are none of our business. <br class="hidden md:block">
+                <span class="text-white italic font-bold">Guaranteed Local Processing.</span>
             </p>
 
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-slate-500"
-                data-aos="fade-up" data-aos-delay="200">
-                <div class="flex items-center gap-3 group">
-                    <i class="fas fa-microchip text-cyan-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-[0.2em]">100% On-Device</span>
+            <div class="flex flex-wrap items-center justify-center gap-4 md:gap-10" data-aos="fade-up"
+                data-aos-delay="400">
+                <div
+                    class="flex items-center gap-3 group px-4 py-2 rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm hover:border-cyan-500/30 transition-all duration-300">
+                    <i class="fas fa-microchip text-cyan-500 group-hover:rotate-12 transition-transform"></i>
+                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-300">100% On-Device</span>
                 </div>
-                <div class="flex items-center gap-3 group">
-                    <i class="fas fa-cloud-slash text-cyan-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Fără Server Externe</span>
+                <div
+                    class="flex items-center gap-3 group px-4 py-2 rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm hover:border-cyan-500/30 transition-all duration-300">
+                    <i class="fas fa-cloud-slash text-cyan-500 group-hover:rotate-12 transition-transform"></i>
+                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-300">No External
+                        Servers</span>
                 </div>
-                <div class="flex items-center gap-3 group">
-                    <i class="fas fa-user-secret text-cyan-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Zero Data Tracking</span>
+                <div
+                    class="flex items-center gap-3 group px-4 py-2 rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm hover:border-cyan-500/30 transition-all duration-300">
+                    <i class="fas fa-user-secret text-cyan-500 group-hover:rotate-12 transition-transform"></i>
+                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-300">Zero Data
+                        Tracking</span>
                 </div>
             </div>
         </div>
 
-        <div class="absolute bottom-10 left-0 right-0 flex flex-col items-center justify-center gap-3"
-            data-aos="fade-up" data-aos-delay="400">
-            <span class="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-600">Explorează Viitorul
-                Privacy</span>
-            <div class="w-[2px] h-16 bg-white/5 relative overflow-hidden rounded-full">
+        <div class="absolute bottom-12 left-0 right-0 flex flex-col items-center justify-center gap-4"
+            data-aos="fade-up" data-aos-delay="600">
+            <span class="text-[9px] font-black uppercase tracking-[0.5em] text-slate-500 animate-pulse">Explore the
+                Future of Privacy</span>
+            <div
+                class="w-[1px] h-20 bg-gradient-to-b from-white/20 via-white/5 to-transparent relative overflow-hidden rounded-full">
                 <div
                     class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-transparent via-cyan-400 to-transparent animate-scroll-line">
                 </div>
@@ -291,151 +317,189 @@
         }
     </style>
 
-    <section id="mission" class="py-32 relative overflow-hidden border-t border-white/5">
-        <div class="max-w-5xl mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section id="mission" class="py-32 relative overflow-hidden border-t border-white/5 bg-slate-950">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/5 blur-[120px] rounded-full"></div>
 
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div data-aos="fade-right">
-                    <h4 class="text-cyan-500 font-bold uppercase tracking-[0.3em] text-xs mb-4">Misiunea Noastră</h4>
-                    <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight tracking-tighter">
-                        Într-o lume care îți vinde datele, noi îți oferim <span class="text-cyan-400">Controlul.</span>
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/5 mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                        </span>
+                        <span class="text-cyan-500 font-bold uppercase tracking-[0.2em] text-[10px]">Our Mission</span>
+                    </div>
+
+                    <h2 class="text-4xl md:text-6xl font-black mb-8 leading-[1.1] tracking-tighter text-white">
+                        In a world that sells your data, we give you <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Control.</span>
                     </h2>
+
                     <div class="space-y-6 text-slate-400 text-lg leading-relaxed">
                         <p>
-                            Astăzi, "Cloud" a devenit sinonim cu supravegherea. Fiecare document urcat pe un server
-                            extern este o bucată din identitatea ta care nu îți mai aparține în totalitate.
+                            Today, <span class="text-slate-200">"Cloud"</span> has become synonymous with surveillance.
+                            Every document uploaded to an external server is a piece of your identity that no longer
+                            fully belongs to you.
                         </p>
                         <p>
-                            <strong class="text-white">VoltScan s-a născut dintr-o revoltă digitală.</strong> Credem cu
-                            tărie că cele mai sensibile documente — contracte, acte medicale, semnături — nu au ce căuta
-                            pe servere străine, indiferent de promisiunile de securitate oferite de giganții tech.
+                            <strong class="text-white font-semibold">VoltScan was born out of a digital revolt.</strong>
+                            We firmly believe that your most sensitive documents — contracts or medical records — have
+                            no business on foreign servers, regardless of the security promises made by tech giants.
                         </p>
                         <p>
-                            Motivul existenței noastre este simplu: să demonstrăm că poți avea <span
-                                class="text-white">putere de procesare de ultimă oră</span> fără să sacrifici niciun
-                            pixel de confidențialitate. Cu VoltScan, procesorul telefonului tău este singurul "cloud" de
-                            care ai nevoie.
+                            Our purpose is to prove that you can have <span class="text-cyan-400">cutting-edge
+                                processing power</span> without sacrificing a single pixel of privacy. Your processor is
+                            the only cloud you need.
                         </p>
                     </div>
 
-                    <div class="mt-10 flex items-center gap-6">
+                    <div class="mt-12 flex items-center gap-6 p-4 rounded-2xl bg-white/5 border border-white/10 w-fit">
                         <div class="flex -space-x-3">
                             <div
-                                class="w-10 h-10 rounded-full border-2 border-slate-900 bg-cyan-500 flex items-center justify-center text-slate-900">
-                                <i class="fas fa-lock text-xs"></i>
+                                class="w-12 h-12 rounded-xl border-2 border-slate-900 bg-cyan-500 flex items-center justify-center text-slate-900 shadow-lg shadow-cyan-500/20">
+                                <i class="fas fa-lock text-sm"></i>
                             </div>
                             <div
-                                class="w-10 h-10 rounded-full border-2 border-slate-900 bg-blue-600 flex items-center justify-center text-white">
-                                <i class="fas fa-fingerprint text-xs"></i>
+                                class="w-12 h-12 rounded-xl border-2 border-slate-900 bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-600/20">
+                                <i class="fas fa-fingerprint text-sm"></i>
                             </div>
                             <div
-                                class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-cyan-400">
-                                <i class="fas fa-user-shield text-xs"></i>
+                                class="w-12 h-12 rounded-xl border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-cyan-400 shadow-lg">
+                                <i class="fas fa-user-shield text-sm"></i>
                             </div>
                         </div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Protocolul de
-                            Securitate 2026</span>
+                        <div>
+                            <span class="block text-[10px] font-bold uppercase tracking-widest text-slate-500">Verified
+                                Security</span>
+                            <span class="text-sm font-black text-white uppercase tracking-tighter">Protocol 2026
+                                Active</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="relative flex justify-center items-center" data-aos="zoom-in">
                     <div
-                        class="absolute w-[300px] h-[300px] border border-cyan-500/20 rounded-full animate-[spin_20s_linear_infinite]">
+                        class="absolute w-[350px] h-[350px] border border-cyan-500/10 rounded-full animate-[spin_30s_linear_infinite]">
                     </div>
                     <div
-                        class="absolute w-[400px] h-[400px] border border-white/5 rounded-full animate-[spin_30s_linear_infinite_reverse]">
+                        class="absolute w-[450px] h-[450px] border border-white/5 rounded-full animate-[spin_40s_linear_infinite_reverse]">
                     </div>
 
                     <div
-                        class="relative bg-slate-900/50 backdrop-blur-2xl p-12 rounded-[4rem] border border-white/10 shadow-2xl group overflow-hidden">
+                        class="relative bg-slate-900/40 backdrop-blur-3xl p-12 rounded-[4rem] border border-white/10 shadow-2xl group overflow-hidden">
                         <div
-                            class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                            class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         </div>
 
                         <div class="relative z-10 text-center">
-                            <i class="fas fa-microchip text-6xl text-cyan-500 mb-6 block"></i>
-                            <div class="text-2xl font-black mb-2 uppercase italic tracking-tighter">Local Intelligence
+                            <div
+                                class="w-24 h-24 bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl mx-auto flex items-center justify-center mb-8 border border-white/10 shadow-inner">
+                                <i
+                                    class="fas fa-microchip text-5xl text-cyan-500 group-hover:scale-110 transition-transform duration-500"></i>
                             </div>
-                            <p class="text-[10px] text-slate-500 uppercase tracking-widest">Niciun bit nu trece de
-                                această barieră</p>
+                            <div class="text-3xl font-black mb-2 uppercase italic tracking-tighter text-white">Local AI
+                            </div>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-[0.4em] mb-8">Zero Data Leakage</p>
 
-                            <div class="mt-8 pt-8 border-t border-white/5 flex flex-col items-center gap-2">
-                                <span
-                                    class="text-green-500 text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> Offline
-                                    Shield Active
-                                </span>
+                            <div
+                                class="py-4 px-6 rounded-2xl bg-green-500/10 border border-green-500/20 flex items-center gap-3 mx-auto w-fit">
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-green-500 text-[10px] font-black uppercase tracking-widest">Offline
+                                    Shield Active</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="showcase" class="max-w-7xl mx-auto px-6">
+    <section id="showcase" class="max-w-7xl mx-auto px-6 py-24">
         <div class="showcase-container">
             <div class="py-20 space-y-12">
+
                 <div class="feature-card active" data-feature="scan">
-                    <h3 class="text-3xl font-black text-cyan-400 mb-4 uppercase">Scanare AI Inteligentă</h3>
-                    <p class="text-slate-400 leading-relaxed">Detectare automată a marginilor și curățarea fundalului
-                        prin procesare neurală. Elimini umbrele și obții rezultate cristaline.</p>
+                    <h3 class="text-3xl font-black text-cyan-400 mb-4 uppercase">AI Edge Detection</h3>
+                    <p class="text-slate-400 leading-relaxed">Automatic border recognition and perspective correction
+                        powered by neural processing. Remove shadows and get crystal-clear results instantly.</p>
                 </div>
-                <div class="feature-card" data-feature="merge">
-                    <h3 class="text-3xl font-black text-emerald-400 mb-4 uppercase">Merge PDF</h3>
-                    <p class="text-slate-400 leading-relaxed">Combină zeci de documente într-un singur fișier organizat
-                        profesional, fără a apela la servere externe.</p>
+
+                <div class="feature-card" data-feature="rotate">
+                    <h3 class="text-3xl font-black text-blue-500 mb-4 uppercase">Smart Rotation</h3>
+                    <p class="text-slate-400 leading-relaxed">Fix orientation issues with a single tap. Rotate
+                        individual pages or the entire document without losing quality.</p>
                 </div>
+
+                <div class="feature-card" data-feature="olograf">
+                    <h3 class="text-3xl font-black text-[#D360FA] mb-4 uppercase">Handwritten Signature</h3>
+                    <p class="text-slate-400 leading-relaxed">Sign naturally using your finger or a stylus. Add a
+                        personal, human touch to your digital documents in seconds.</p>
+                </div>
+
+                <div class="feature-card" data-feature="sign">
+                    <h3 class="text-3xl font-black text-indigo-500 mb-4 uppercase">Qualified Signature</h3>
+                    <p class="text-slate-400 leading-relaxed">Import your P12/PFX digital certificate and apply legally
+                        binding signatures. Everything happens 100% offline.</p>
+                </div>
+
                 <div class="feature-card" data-feature="split">
                     <h3 class="text-3xl font-black text-orange-400 mb-4 uppercase">Split & Extract</h3>
-                    <p class="text-slate-400 leading-relaxed">Extrage pagini specifice sau fragmentează PDF-uri masive
-                        instantaneu, direct pe procesorul tău.</p>
+                    <p class="text-slate-400 leading-relaxed">Extract specific pages or break down massive PDF files
+                        into smaller segments directly on your device's processor.</p>
                 </div>
-                <div class="feature-card" data-feature="password">
-                    <h3 class="text-3xl font-black text-[#00F7FF] mb-4 uppercase">Protecție Parolă</h3>
-                    <p class="text-slate-400 leading-relaxed">Criptează fișierele cu standardul AES-256. Siguranță
-                        indestructibilă înainte de partajare.</p>
+
+                <div class="feature-card" data-feature="merge">
+                    <h3 class="text-3xl font-black text-emerald-400 mb-4 uppercase">Merge PDF</h3>
+                    <p class="text-slate-400 leading-relaxed">Combine dozens of documents into a single, professionally
+                        organized file without ever touching a cloud server.</p>
                 </div>
+
                 <div class="feature-card" data-feature="reorder">
-                    <h3 class="text-3xl font-black text-indigo-400 mb-4 uppercase">Smart Reorder</h3>
-                    <p class="text-slate-400 leading-relaxed">Rearanjează structura prin Drag & Drop. Corectează ordinea
-                        paginilor fără a relua scanarea.</p>
+                    <h3 class="text-3xl font-black text-yellow-500 mb-4 uppercase">Smart Reorder</h3>
+                    <p class="text-slate-400 leading-relaxed">Intuitive Drag & Drop interface to rearrange pages. Fix
+                        the flow of your document without rescanning anything.</p>
                 </div>
-                <div class="feature-card" data-feature="sign">
-                    <h3 class="text-3xl font-black text-blue-400 mb-4 uppercase">Semnătură Digitală P12</h3>
-                    <p class="text-slate-400 leading-relaxed">Importă certificatul digital și semnează PDF-uri cu
-                        valoare legală, complet offline.</p>
+
+                <div class="feature-card" data-feature="password">
+                    <h3 class="text-3xl font-black text-rose-500 mb-4 uppercase">Password Protection</h3>
+                    <p class="text-slate-400 leading-relaxed">Encrypt your sensitive files with industrial-grade AES-256
+                        standards. Set bulletproof security before sharing.</p>
                 </div>
-                <div class="feature-card" data-feature="olograf">
-                    <h3 class="text-3xl font-black text-[#D360FA] mb-4 uppercase">Semnătură Olografă</h3>
-                    <p class="text-slate-400 leading-relaxed">Semnează natural cu degetul sau stylus-ul. Notă personală
-                        în câteva secunde.</p>
+
+                <div class="feature-card" data-feature="watermark">
+                    <h3 class="text-3xl font-black text-teal-400 mb-4 uppercase">Dynamic Watermark</h3>
+                    <p class="text-slate-400 leading-relaxed">Protect your intellectual property. Add custom text or
+                        image watermarks to prevent unauthorized distribution.</p>
                 </div>
-                <div class="feature-card" data-feature="ocr">
-                    <h3 class="text-3xl font-black text-amber-400 mb-4 uppercase">OCR On-Device</h3>
-                    <p class="text-slate-400 leading-relaxed">Transformă imaginile în text editabil. Procesare 100%
-                        locală pentru confidențialitate totală.</p>
-                </div>
+
                 <div class="feature-card" data-feature="privacy">
-                    <h3 class="text-3xl font-black text-rose-400 mb-4 uppercase">Integritate Totală</h3>
-                    <p class="text-slate-400 leading-relaxed">Fără cloud, fără conturi. Documentele tale nu părăsesc
-                        niciodată mediul securizat al telefonului.</p>
+                    <h3 class="text-3xl font-black text-white mb-4 uppercase">Zero Tracking</h3>
+                    <p class="text-slate-400 leading-relaxed">No cloud, no accounts, no data harvesting. Your documents
+                        never leave the secure environment of your phone.</p>
                 </div>
+
             </div>
 
             <div class="sticky-phone-wrapper hidden lg:flex">
-                <div class="iphone-frame">
+                <div class="iphone-frame border-white/20 bg-slate-900/50 backdrop-blur-xl">
                     <div class="iphone-notch"></div>
-                    <div
-                        class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center p-8 text-center">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
                         <i id="phone-icon"
-                            class="fas fa-camera text-8xl text-cyan-500 mb-6 transition-all duration-300"></i>
-                        <h4 id="phone-label" class="text-sm font-black tracking-widest uppercase text-cyan-500">Scanning
+                            class="fas fa-camera text-8xl text-cyan-500 mb-6 transition-all duration-500 drop-shadow-[0_0_20px_rgba(6,182,212,0.4)]"></i>
+                        <h4 id="phone-label" class="text-sm font-black tracking-[0.3em] uppercase text-cyan-500">System
                             Ready</h4>
-                        <div class="mt-8 w-full bg-white/5 h-1 rounded-full overflow-hidden">
-                            <div id="phone-bar" class="h-full bg-cyan-500 w-1/3 transition-all duration-500"></div>
+
+                        <div class="mt-8 w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                            <div id="phone-bar"
+                                class="h-full bg-gradient-to-r from-cyan-500 to-blue-500 w-1/3 transition-all duration-700 ease-in-out">
+                            </div>
                         </div>
+
+                        <div class="mt-4 text-[10px] text-slate-500 uppercase tracking-widest font-bold">Local
+                            Encryption Active</div>
                     </div>
                 </div>
             </div>
@@ -443,305 +507,294 @@
     </section>
 
 
-    <section id="pricing" class="py-32 relative overflow-hidden">
+    <section id="download" class="py-32 relative overflow-hidden bg-slate-950">
         <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none">
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/5 blur-[150px] rounded-full pointer-events-none">
         </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <h2 class="text-5xl md:text-6xl font-black uppercase tracking-tighter italic">
-                    Alege Puterea <span class="text-cyan-400 text-glow">Pro</span>
-                </h2>
-                <p class="text-slate-400 mt-4 max-w-xl mx-auto font-medium">
-                    Funcțiile Pro se activează direct în aplicație. Explorează planurile noastre gândite pentru
-                    securitate maximă.
-                </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-32">
+                <div class="text-center md:text-left" data-aos="fade-up">
+                    <div class="text-4xl md:text-5xl font-black text-white mb-2 italic">100%</div>
+                    <p class="text-cyan-500 text-[10px] font-bold uppercase tracking-[0.3em]">Offline Processing</p>
+                </div>
+                <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-black text-white mb-2 italic">Zero</div>
+                    <p class="text-cyan-500 text-[10px] font-bold uppercase tracking-[0.3em]">Cloud Servers Used</p>
+                </div>
+                <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl font-black text-white mb-2 italic">AES-256</div>
+                    <p class="text-cyan-500 text-[10px] font-bold uppercase tracking-[0.3em]">Encryption</p>
+                </div>
+                <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-black text-white mb-2 italic">∞</div>
+                    <p class="text-cyan-500 text-[10px] font-bold uppercase tracking-[0.3em]">Privacy Guaranteed</p>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-24">
-                <div class="bg-slate-900/40 backdrop-blur-xl p-10 rounded-[3rem] border border-white/5 flex flex-col"
-                    data-aos="fade-right">
-                    <div class="mb-8">
-                        <h4 class="text-slate-500 font-bold uppercase tracking-[0.2em] text-[10px] mb-2">Abonament
-                            Standard</h4>
-                        <div class="text-4xl font-black text-white italic">9.99 RON</div>
-                        <p class="text-slate-500 text-xs mt-1">Flexibilitate maximă</p>
-                    </div>
-                    <ul class="space-y-4 text-sm text-slate-300">
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-cyan-500"></i> Scanări
-                            nelimitate</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-cyan-500"></i> Fără Reclame</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-cyan-500"></i> Export PDF
-                            High-Res</li>
-                    </ul>
-                </div>
-
-                <div class="relative group" data-aos="fade-up">
-                    <div
-                        class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-[3.2rem] blur opacity-20">
-                    </div>
-                    <div
-                        class="relative bg-gradient-to-br from-blue-600 to-blue-800 p-10 md:p-12 rounded-[3rem] shadow-2xl flex flex-col h-full transform lg:scale-105 border border-white/20">
+            <div class="relative mb-32" data-aos="zoom-in">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="group relative overflow-hidden rounded-[2rem] border border-white/10 aspect-[4/5]">
+                        <img src="https://volt-scan.vercel.app/edge_detection.jpeg" alt="Scan Interface"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0">
                         <div
-                            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-cyan-400 text-slate-900 px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl">
-                            Best Value</div>
-                        <div class="mb-8">
-                            <h4 class="text-blue-100 font-bold uppercase tracking-[0.2em] text-[10px] mb-2">Recomandat
-                            </h4>
-                            <div class="text-6xl font-black text-white italic leading-none">4.99 RON</div>
-                            <p class="text-blue-200/70 text-xs mt-2">per lună, facturat anual</p>
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80">
                         </div>
-                        <ul class="space-y-4 text-sm text-white/90">
-                            <li class="flex items-center gap-3"><i class="fas fa-star text-cyan-300"></i> 7 Zile Testare
-                                Gratuită</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check-double text-cyan-300"></i> OCR
-                                Pro Inteligent</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check-double text-cyan-300"></i>
-                                Semnătură P12</li>
-                        </ul>
+                        <div class="absolute bottom-8 left-8">
+                            <span class="text-cyan-400 font-black italic uppercase tracking-tighter text-xl">Pure
+                                Intelligence</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="bg-slate-900/40 backdrop-blur-xl p-10 rounded-[3rem] border border-white/5 flex flex-col"
-                    data-aos="fade-left">
-                    <div class="mb-8">
-                        <h4 class="text-purple-400 font-bold uppercase tracking-[0.2em] text-[10px] mb-2">Elite</h4>
-                        <div class="text-4xl font-black text-white italic">49.99 RON</div>
-                        <p class="text-slate-500 text-xs mt-1">O singură plată</p>
+                    <div
+                        class="group relative overflow-hidden rounded-[2rem] border border-cyan-500/30 aspect-[4/5] md:-mt-12 shadow-[0_0_50px_rgba(6,182,212,0.15)]">
+                        <img src="https://volt-scan.vercel.app/sign.jpeg" alt="Signature UI"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-600/40 via-transparent to-transparent">
+                        </div>
+                        <div class="absolute bottom-8 left-8">
+                            <span class="text-white font-black italic uppercase tracking-tighter text-2xl">Digital
+                                Signature</span>
+                        </div>
                     </div>
-                    <ul class="space-y-4 text-sm text-slate-300">
-                        <li class="flex items-center gap-3"><i class="fas fa-infinity text-purple-500"></i> Acces pe
-                            viață</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-infinity text-purple-500"></i> Update-uri
-                            prioritare</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-infinity text-purple-500"></i> Suport VIP
-                        </li>
-                    </ul>
+                    <div class="group relative overflow-hidden rounded-[2rem] border border-white/10 aspect-[4/5]">
+                        <img src="https://volt-scan.vercel.app/watermark.jpeg" alt="Copy-write Protection"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80">
+                        </div>
+                        <div class="absolute bottom-8 left-8">
+                            <span class="text-cyan-400 font-black italic uppercase tracking-tighter text-xl">Customize
+                                Watermark</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="flex flex-col items-center gap-10" data-aos="fade-up">
+            <div class="flex flex-col items-center gap-12" data-aos="fade-up">
                 <div class="text-center">
-                    <h3 class="text-2xl font-bold mb-2 uppercase italic tracking-tighter">Ești gata să începi?</h3>
-                    <p class="text-slate-500 uppercase tracking-[0.3em] text-[10px]">Descarcă VoltScan gratuit din
-                        magazinele oficiale</p>
+                    <h3 class="text-4xl md:text-5xl font-black mb-4 uppercase italic tracking-tighter text-white">Start
+                        your private journey</h3>
+                    <p class="text-slate-500 uppercase tracking-[0.4em] text-[10px] max-w-md mx-auto">Download VoltScan
+                        and experience true on-device processing</p>
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-6">
                     <a href="#"
-                        class="group relative flex items-center gap-4 bg-slate-800 text-white px-8 py-4 rounded-2xl border border-white/10 transition-all hover:border-cyan-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] duration-300 shadow-xl"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <i class="fab fa-google-play text-2xl text-cyan-400 group-hover:animate-pulse"></i>
+                        class="group relative flex items-center gap-5 bg-slate-800 text-white px-10 py-5 rounded-2xl border border-white/10 transition-all hover:border-cyan-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.25)] duration-500">
+                        <i class="fab fa-google-play text-3xl text-cyan-400 group-hover:animate-pulse"></i>
                         <div class="text-left">
-                            <p class="text-[10px] uppercase font-bold leading-none opacity-60">Get it on</p>
-                            <p class="text-xl font-black leading-none tracking-tight">Google Play</p>
+                            <p class="text-[10px] uppercase font-black leading-none opacity-40">Get it on</p>
+                            <p class="text-2xl font-black leading-none tracking-tight mt-1">Google Play</p>
                         </div>
-
                         <span
-                            class="absolute -top-2 -left-2 bg-green-500 w-3 h-3 rounded-full border-2 border-slate-900 animate-pulse"></span>
+                            class="absolute -top-1 -left-1 bg-cyan-500 w-3 h-3 rounded-full border-2 border-slate-950 animate-pulse"></span>
                     </a>
 
-                    <div class="group relative flex items-center gap-4 bg-white/5 text-slate-500 px-8 py-4 rounded-2xl border border-white/5 cursor-not-allowed overflow-hidden shadow-inner"
-                        data-aos="fade-up" data-aos-delay="200">
-
+                    <div
+                        class="group relative flex items-center gap-5 bg-white/5 text-slate-500 px-10 py-5 rounded-2xl border border-white/5 overflow-hidden opacity-50">
                         <div
-                            class="absolute top-2 -right-8 bg-cyan-500 text-slate-950 text-[8px] font-black uppercase tracking-tighter py-1 w-32 rotate-45 text-center shadow-lg">
-                            In Progress
+                            class="absolute top-2 -right-8 bg-slate-700 text-white text-[8px] font-black uppercase tracking-tighter py-1 w-32 rotate-45 text-center">
+                            Coming Soon
                         </div>
+                        <i class="fab fa-apple text-3xl opacity-20"></i>
+                        <div class="text-left">
+                            <p class="text-[10px] uppercase font-black leading-none opacity-40">App Store</p>
+                            <p class="text-2xl font-black leading-none tracking-tight mt-1 italic">iOS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <i class="fab fa-apple text-3xl grayscale opacity-30"></i>
-                        <div class="text-left grayscale opacity-30">
-                            <p class="text-[10px] uppercase font-bold leading-none">Coming Soon to</p>
-                            <p class="text-xl font-black leading-none">App Store</p>
+    <section id="philosophy" class="py-24 relative overflow-hidden border-y border-white/5 bg-slate-950">
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style="background-image: radial-gradient(#06b6d4 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+
+                <div class="w-full md:w-1/2" data-aos="fade-right">
+                    <div
+                        class="bg-[#0a0f1a] rounded-2xl border border-white/10 shadow-2xl overflow-hidden font-mono text-sm">
+                        <div class="bg-white/5 px-4 py-2 border-b border-white/10 flex gap-2">
+                            <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+                            <div class="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+                            <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
+                            <span
+                                class="ml-4 text-[10px] text-slate-500 uppercase tracking-widest">security_audit.sys</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex gap-3">
+                                <span class="text-cyan-500">❯</span>
+                                <span class="text-slate-300">Initializing Local Neural Engine...</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="text-green-500">SUCCESS</span>
+                                <span class="text-slate-400">Sandbox environment verified.</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="text-cyan-500">❯</span>
+                                <span class="text-slate-300">Checking network requests...</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="text-rose-500">BLOCKED</span>
+                                <span class="text-slate-500 italic">No external telemetry allowed.</span>
+                            </div>
+                            <div class="flex gap-3 animate-pulse">
+                                <span class="text-cyan-500">❯</span>
+                                <span class="text-white">Privacy Protocol: ACTIVE</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <p class="text-slate-600 text-[10px] uppercase tracking-[0.5em] mt-10">
-                    Securitate garantată • Procesare Locală • Fără Tracking
-                </p>
+                <div class="w-full md:w-1/2" data-aos="fade-left">
+                    <div
+                        class="inline-block px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-500 text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+                        Our Philosophy
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight uppercase italic">
+                        Built on <span class="text-cyan-400">Zero-Trust</span> Architecture
+                    </h2>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                        We didn't just build an app; we built a fortress. VoltScan operates on a
+                        <strong class="text-white font-semibold">Zero-Knowledge</strong> principle. We don't have your
+                        keys, we don't see your files, and we don't track your behavior.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-5 h-5 rounded bg-cyan-500/20 flex items-center justify-center border border-cyan-500/30">
+                                <i class="fas fa-check text-[10px] text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm uppercase tracking-tight">Independent
+                                    Development</h4>
+                                <p class="text-slate-500 text-sm">Self-funded and free from corporate data-harvesting
+                                    agendas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-1 w-5 h-5 rounded bg-cyan-500/20 flex items-center justify-center border border-cyan-500/30">
+                                <i class="fas fa-check text-[10px] text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm uppercase tracking-tight">Radical Transparency
+                                </h4>
+                                <p class="text-slate-500 text-sm">Our code is optimized for one thing: your document's
+                                    safety.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            <style>
-                /* Dezactivează interacțiunea pentru elementul "In Progress" */
-                .cursor-not-allowed {
-                    pointer-events: none;
-                    user-select: none;
-                }
-
-                /* Efect de glow subtil pentru titlu */
-                h3 {
-                    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-                }
-            </style>
-    </section>
-
-    <section id="coffee" class="py-20 bg-slate-950/50 backdrop-blur-md border-y border-white/5">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <i class="fas fa-mug-hot text-5xl text-[#FFDD00] mb-6"></i>
-            <h2 class="text-4xl font-black mb-4 uppercase italic">Susține Dezvoltarea</h2>
-            <p class="text-slate-400 mb-8">VoltScan este un proiect independent. Fiecare cafea ne ajută să menținem
-                infrastructura și să adăugăm funcții noi fără a vinde datele tale.</p>
-            <a href="#"
-                class="coffee-btn inline-flex items-center gap-3 px-10 py-4 rounded-full font-black text-lg uppercase">
-                Buy me a coffee <i class="fas fa-external-link-alt text-sm"></i>
-            </a>
         </div>
     </section>
 
-    <section id="contact" class="py-32">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="bg-slate-900/60 p-12 rounded-[3rem] border border-cyan-500/20">
-                <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter italic">Ai întrebări? <span
-                        class="text-cyan-400">Scrie-ne</span></h2>
-                <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" placeholder="Nume"
-                            class="bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-cyan-500 transition w-full">
-                        <input type="email" placeholder="Email"
-                            class="bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-cyan-500 transition w-full">
+    <section id="contact" class="py-32 relative">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="bg-slate-900/60 backdrop-blur-xl p-8 md:p-16 rounded-[3rem] border border-white/10 shadow-2xl">
+
+                <div class="text-center mb-10">
+                    <div
+                        class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+                        Get in touch
                     </div>
-                    <textarea placeholder="Mesajul tău" rows="4"
-                        class="bg-white/5 border border-white/10 p-4 rounded-xl focus:outline-none focus:border-cyan-500 transition w-full"></textarea>
-                    <button
-                        class="bg-white text-black px-12 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-cyan-500 transition w-full">Trimite
-                        Mesaj</button>
+                    <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter italic text-white">
+                        Any Questions? <span class="text-cyan-400 text-glow">Contact Us</span>
+                    </h2>
+                </div>
+
+                <form action="https://formspree.io/f/vladrosca93@gmail.com" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold text-slate-500 ml-2 tracking-widest">Full
+                                Name</label>
+                            <input type="text" name="name" placeholder="John Doe" required
+                                class="bg-white/5 border border-white/10 p-4 rounded-2xl focus:outline-none focus:border-cyan-500/50 text-white transition w-full backdrop-blur-sm">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase font-bold text-slate-500 ml-2 tracking-widest">Email
+                                Address</label>
+                            <input type="email" name="email" placeholder="john@example.com" required
+                                class="bg-white/5 border border-white/10 p-4 rounded-2xl focus:outline-none focus:border-cyan-500/50 text-white transition w-full backdrop-blur-sm">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase font-bold text-slate-500 ml-2 tracking-widest">Your
+                            Message</label>
+                        <textarea name="message" placeholder="How can we help you?" rows="4" required
+                            class="bg-white/5 border border-white/10 p-4 rounded-2xl focus:outline-none focus:border-cyan-500/50 text-white transition w-full backdrop-blur-sm"></textarea>
+                    </div>
+
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit"
+                        class="group relative bg-white text-black px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-cyan-500 hover:text-white transition-all duration-300 w-full overflow-hidden">
+                        <span class="relative z-10">Send Secure Message</span>
+                        <div
+                            class="absolute inset-0 bg-cyan-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        </div>
+                    </button>
+
+                    <p class="text-center text-[9px] text-slate-600 uppercase tracking-widest mt-4">
+                        Your email is never stored on our servers. End-to-end communication only.
+                    </p>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/5 bg-slate-950/80">
+    <footer class="py-12 border-t border-white/5 bg-slate-950/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center gap-3">
-                <div class="p-2 bg-slate-800 rounded-lg"><i class="fas fa-bolt text-cyan-500"></i></div>
+                <div class="p-2 bg-slate-800 rounded-lg border border-white/5">
+                    <i class="fas fa-bolt text-cyan-500"></i>
+                </div>
                 <span class="font-black uppercase tracking-widest text-white">VoltScan 2026</span>
             </div>
 
-            <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                <a href="flutte.html" class="hover:text-white transition">Termeni și Condiții</a>
-                <a href="privacy.html" class="hover:text-white transition">Politica de Privacy</a>
+            <div class="flex gap-8 text-[10px] font-black uppercase tracking-[0.3em] text-slate-500">
+                <a href="terms.html" class="hover:text-cyan-400 transition-colors duration-300">Terms & Conditions</a>
+                <a href="privacy.html" class="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</a>
             </div>
 
-            <div class="flex gap-6 text-xl text-slate-400">
-                <i class="fab fa-twitter hover:text-cyan-400 transition cursor-pointer"></i>
-                <i class="fab fa-linkedin hover:text-cyan-400 transition cursor-pointer"></i>
-                <i class="fab fa-github hover:text-cyan-400 transition cursor-pointer"></i>
+            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-white/5 bg-white/5">
+                <i class="fas fa-shield-alt text-xs text-cyan-500/50"></i>
+                <span class="text-[9px] font-bold uppercase tracking-widest text-slate-600">Focused on Privacy</span>
             </div>
         </div>
     </footer>
 
 
-    <div id="privacyModal"
-        class="fixed inset-0 bg-black/95 z-[300] hidden items-center justify-center p-4 backdrop-blur-2xl">
-        <div
-            class="bg-slate-900 p-8 md:p-12 rounded-[3rem] max-w-2xl border border-cyan-500/20 max-h-[85vh] overflow-y-auto custom-scrollbar">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="p-3 bg-cyan-500/10 rounded-2xl"><i class="fas fa-shield-check text-cyan-400 text-2xl"></i>
-                </div>
-                <h2 class="text-3xl font-black uppercase italic text-white">Privacy <span
-                        class="text-cyan-400">Vault</span></h2>
-            </div>
 
-            <div class="text-slate-400 space-y-6 text-sm leading-relaxed">
-                <section>
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">01. Arhitectură
-                        Zero-Knowledge</h4>
-                    <p>VoltScan funcționează pe principiul <strong>"Local-First"</strong>. Toate operațiunile (OCR,
-                        Scanare AI, Merge/Split) sunt executate direct de procesorul telefonului (NPU/GPU). Conținutul
-                        documentelor tale nu este niciodată transmis, stocat sau analizat pe servere externe.</p>
-                </section>
-
-                <section>
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">02. Firebase Crashlytics &
-                        Diagnoză</h4>
-                    <p>Pentru a asigura stabilitatea pe mii de modele de dispozitive, utilizăm <strong>Firebase
-                            Crashlytics</strong>. Acesta colectează strict: modelul dispozitivului, versiunea sistemului
-                        de operare și log-ul tehnic în momentul unei erori. <strong>Nu sunt colectate:</strong> nume,
-                        locații, adrese IP sau metadate din documente.</p>
-                </section>
-
-                <section>
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">03. Standarde de Criptare
-                    </h4>
-                    <p>Funcția de protecție prin parolă utilizează algoritmul <strong>AES-256 (Advanced Encryption
-                            Standard)</strong>. Cheile de criptare sunt generate local și nu pot fi recuperate de echipa
-                        VoltScan dacă sunt pierdute.</p>
-                </section>
-
-                <section>
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">04. Permisiuni</h4>
-                    <p>Accesul la cameră și stocare este utilizat exclusiv pentru capturarea și salvarea fișierelor
-                        tale. Nu accesăm galeria foto fără acordul tău explicit.</p>
-                </section>
-            </div>
-
-            <button onclick="closeModal('privacyModal')"
-                class="mt-10 bg-cyan-500 text-slate-950 px-10 py-4 rounded-2xl font-black w-full hover:bg-white transition-all shadow-lg shadow-cyan-500/20">ÎNCHIDE</button>
-        </div>
-    </div>
-
-    <div id="termsModal"
-        class="fixed inset-0 bg-black/95 z-[300] hidden items-center justify-center p-4 backdrop-blur-2xl">
-        <div
-            class="bg-slate-900 p-8 md:p-12 rounded-[3rem] max-w-2xl border border-white/10 max-h-[85vh] overflow-y-auto custom-scrollbar">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="p-3 bg-white/5 rounded-2xl"><i class="fas fa-file-signature text-white text-2xl"></i></div>
-                <h2 class="text-3xl font-black uppercase italic text-white">Termeni <span
-                        class="text-slate-500">Legali</span></h2>
-            </div>
-
-            <div class="text-slate-400 space-y-6 text-sm leading-relaxed">
-                <section>
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">Utilizarea Serviciului</h4>
-                    <p>VoltScan oferă unelte de procesare documente "as-is". Utilizatorul poartă întreaga
-                        responsabilitate pentru legalitatea documentelor scanate și semnate prin intermediul aplicației.
-                    </p>
-                </section>
-
-                <section>
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">Abonamente și Plăți</h4>
-                    <p>Toate tranzacțiile financiare sunt gestionate securizat de <strong>Google Play Commerce</strong>.
-                        VoltScan nu stochează datele cardului tău. Anularea abonamentelor Pro se face din setările
-                        Google Play, cu cel puțin 24h înainte de reînnoire.</p>
-                </section>
-
-                <section>
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">Limitarea Răspunderii</h4>
-                    <p>Deoarece securitatea este 100% locală, pierderea accesului la dispozitiv sau uitarea parolelor de
-                        criptare AES-256 duce la imposibilitatea recuperării datelor. VoltScan nu are "backdoors" pentru
-                        recuperarea fișierelor criptate.</p>
-                </section>
-
-                <section>
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">Semnătura Digitală P12</h4>
-                    <p>Utilizarea certificatelor .p12 importate depinde de validitatea certificatului furnizat de
-                        utilizator. VoltScan garantează doar integritatea tehnică a aplicării semnăturii, nu și
-                        valabilitatea juridică a certificatelor externe.</p>
-                </section>
-            </div>
-
-            <button onclick="closeModal('termsModal')"
-                class="mt-10 bg-white text-black px-10 py-4 rounded-2xl font-black w-full hover:bg-slate-200 transition-all">AM
-                ÎNȚELES</button>
-        </div>
-    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
         const phoneData = {
-            'scan': { icon: 'fa-camera', color: '#00d2ff', label: 'AI Scanner Active', bar: '20%' },
-            'merge': { icon: 'fa-object-group', color: '#10b981', label: 'Merging Files', bar: '35%' },
+            'scan': { icon: 'fa-expand', color: '#22d3ee', label: 'AI Edge Detection', bar: '10%' },
+            'rotate': { icon: 'fa-redo-alt', color: '#3b82f6', label: 'Rotating Pages', bar: '20%' },
+            'olograf': { icon: 'fa-pen-nib', color: '#D360FA', label: 'Handwritten Sign', bar: '30%' },
+            'sign': { icon: 'fa-file-signature', color: '#6366f1', label: 'Qualified P12 Sign', bar: '40%' },
             'split': { icon: 'fa-scissors', color: '#f97316', label: 'Splitting PDF', bar: '50%' },
-            'password': { icon: 'fa-lock', color: '#00F7FF', label: 'Password protect', bar: '60%' },
-            'reorder': { icon: 'fa-sort-amount-down', color: '#6366f1', label: 'Reordering Pages', bar: '65%' },
-            'sign': { icon: 'fa-signature', color: '#60a5fa', label: 'P12 Signing', bar: '80%' },
-            'olograf': { icon: 'fa-pen', color: '#D360FA', label: 'Olografic Signing', bar: '85%' },
-            'ocr': { icon: 'fa-file-alt', color: '#fbbf24', label: 'OCR Processing', bar: '90%' },
-            'privacy': { icon: 'fa-shield-halved', color: '#fb7185', label: 'Device Secured', bar: '100%' }
+            'merge': { icon: 'fa-layer-group', color: '#10b981', label: 'Merging Files', bar: '65%' },
+            'reorder': { icon: 'fa-sort-amount-down', color: '#eab308', label: 'Reordering Pages', bar: '75%' },
+            'password': { icon: 'fa-user-lock', color: '#f43f5e', label: 'AES-256 Encryption', bar: '85%' },
+            'watermark': { icon: 'fa-stamp', color: '#2dd4bf', label: 'Applying Watermark', bar: '95%' },
+            'privacy': { icon: 'fa-shield-halved', color: '#ffffff', label: '100% Offline', bar: '100%' }
         };
 
         // --- LOGICA CIRCUITELOR NEON ---
