@@ -55,9 +55,9 @@
 
         #mission,
         #showcase,
+        #reviews,
         #download {
             scroll-margin-top: 120px;
-            /* Ajustează valoarea asta în funcție de înălțimea navbar-ului tău */
         }
 
 
@@ -100,7 +100,6 @@
             inset: 0;
             z-index: -1;
             background: #020617;
-            /* Fundal solid pentru a vedea liniile clar */
         }
 
         #circuit-canvas {
@@ -110,7 +109,6 @@
             width: 100%;
             height: 100%;
             z-index: 0;
-            /* Canvas-ul peste fundalul negru */
         }
 
         .particle {
@@ -221,6 +219,38 @@
             box-shadow: 0 0 20px rgba(255, 221, 0, 0.4);
         }
 
+        /* Stiluri specifice pentru Caruselul de Recenzii Animale */
+        .reviews-track-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+        }
+
+        @keyframes scrollReviews {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 1rem));
+            }
+        }
+
+        .animate-reviews {
+            animation: scrollReviews 35s linear infinite;
+        }
+
+        .reviews-track-container:hover .animate-reviews {
+            animation-play-state: paused;
+        }
+
         @media (max-width: 1024px) {
             .showcase-container {
                 grid-template-columns: 1fr;
@@ -264,6 +294,7 @@
             <div class="hidden lg:flex gap-8 text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">
                 <a href="#mission" class="hover:text-cyan-400 transition-colors duration-300">Mission</a>
                 <a href="#showcase" class="hover:text-cyan-400 transition-colors duration-300">Features</a>
+                <a href="#reviews" class="hover:text-cyan-400 transition-colors duration-300">Reviews</a>
                 <a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contact</a>
             </div>
 
@@ -344,7 +375,6 @@
     </section>
 
     <style>
-        /* Efect de strălucire discretă pentru textul principal */
         .text-glow {
             text-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
         }
@@ -553,6 +583,31 @@
         </div>
     </section>
 
+    <section id="reviews" class="py-32 relative overflow-hidden border-t border-white/5 bg-slate-950">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 blur-[130px] rounded-full pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 mb-12">
+            <div class="text-center">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/5 mb-6">
+                    <span class="text-cyan-500 font-bold uppercase tracking-[0.2em] text-[10px]">User Feedback</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter italic text-white">
+                    Trusted by <span
+                        class="text-transparent bg-clip-text bg-gradient-to-b from-cyan-300 via-cyan-500 to-blue-600 drop-shadow-[0_0_30px_rgba(6,182,212,0.3)]">Thousands</span>
+                </h2>
+                <p class="text-slate-500 uppercase tracking-[0.4em] text-[10px] mt-4 max-w-md mx-auto">What our
+                    community says on mobile platforms</p>
+            </div>
+        </div>
+
+        <div class="reviews-track-container">
+            <div id="reviews-slider" class="reviews-track animate-reviews">
+            </div>
+        </div>
+    </section>
 
     <section class="py-32 relative overflow-hidden bg-slate-950">
         <div
@@ -876,13 +931,79 @@
         </div>
     </footer>
 
-
-
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
+        // ==========================================
+        //  ARRAY HARDCODAT DE RECENZII (UȘOR DE ADMINISTRAT)
+        // ==========================================
+        // Tipuri permise pentru 'platform': 'apple' sau 'google-play'
+        const reviewsData = [
+            {
+                name: "Viorel c.",
+                platform: "google-play",
+                role: "Google Play User",
+                stars: 5,
+                text: "Super"
+            },
+            {
+                name: "Alexandru E.",
+                platform: "google-play",
+                role: "Google Play User",
+                stars: 5,
+                text: "Aplicație foarte utilă. Documentele se salvează doar pe spațiul de stocare al telefonului. Ai control total asupra lor!"
+            },
+
+        ];
+
+        // Generare dinamică și dublare (pentru carusel infinit fluid)
+        function injectReviews() {
+            const container = document.getElementById('reviews-slider');
+            if (!container) return;
+
+            // Îmbinăm array-ul cu el însuși pentru a asigura un loop vizual fără întreruperi
+            const doubleReviews = [...reviewsData, ...reviewsData];
+
+            let htmlContent = "";
+            doubleReviews.forEach(review => {
+                const platformIcon = review.platform === 'apple' ? 'fab fa-apple text-xl' : 'fab fa-google-play text-lg';
+                let starIcons = "";
+                for (let i = 0; i < review.stars; i++) {
+                    starIcons += '<i class="fas fa-star"></i>';
+                }
+
+                htmlContent += `
+                    <div class="w-[350px] p-8 rounded-[2rem] border border-white/5 bg-white/[0.02] backdrop-blur-sm hover:border-cyan-500/30 transition-all duration-500 group flex flex-col justify-between shrink-0">
+                        <div>
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="flex gap-1 text-yellow-400 text-xs">
+                                    ${starIcons}
+                                </div>
+                                <i class="${platformIcon} text-slate-500 group-hover:text-cyan-400 transition-colors"></i>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6 font-medium italic">"${review.text}"</p>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-white/5 pt-4">
+                            <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center border border-white/10">
+                                <i class="fas fa-user text-slate-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm tracking-tight">${review.name}</h4>
+                                <span class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">${review.role}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = htmlContent;
+        }
+
+        // Executăm funcția la încărcarea paginii
+        injectReviews();
+
+        // --- LOGICA DETALII TELEFON ---
         const phoneData = {
             'scan': { icon: 'fa-expand', color: '#22d3ee', label: 'AI Edge Detection', bar: '10%' },
             'rotate': { icon: 'fa-redo-alt', color: '#3b82f6', label: 'Rotating Pages', bar: '20%' },
@@ -911,9 +1032,7 @@
         }
 
         class CircuitParticle {
-            constructor() {
-                this.init();
-            }
+            constructor() { this.init(); }
             init() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
@@ -989,7 +1108,6 @@
                         bar.style.backgroundColor = config.color;
                         bar.style.width = config.bar;
 
-                        // Schimbăm subtil culoarea liniilor de fundal să se potrivească cu feature-ul activ
                         ctx.strokeStyle = config.color;
                     }
                 }
@@ -1000,6 +1118,5 @@
         function closeModal(id) { document.getElementById(id).style.display = 'none'; }
     </script>
 </body>
-
 
 </html>
